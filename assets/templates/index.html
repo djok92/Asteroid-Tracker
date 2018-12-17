@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Asteroid | Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="dist/css/main.css"
+    />
+  </head>
+  <body>
+    <div class="container" id="main">
+      <div class="dates-container-holder">
+        <div class="container-start">
+          <label for="container-start__input" class="container-start__label"
+            >Start Date:</label
+          >
+          <input type="text" class="container-start__input" />
+        </div>
+        <div class="container-end">
+          <label for="container-end__input" class="container-start__label"
+            >End Date:</label
+          >
+          <input type="text" class="container-end__input" />
+        </div>
+      </div>
+      <button class="show-table btn">Prikaži Asteroide</button>
+      <div class="asteroid-table-holder">
+        <table class="asteroid-table" id="table"></table>
+      </div>
+
+      <div class="asteroid-suggestion-and-list">
+        <div class="input-for-table-holder">
+          <label for="input-for-table">Unesite ime asteroida iz tabele</label>
+          <input type="text" class="input-for-table" list="datalist-asteroids" />
+          <datalist id="datalist-asteroids"></datalist>
+        </div>
+        <div class="selected-asteroids-list-and-button">
+          <h3>Izabrani asteroidi</h3>
+          <ul class="selected-asteroids"></ul>
+          <button  class="times-traveled btn">
+            Broj prolazaka pored zemlje
+          </button>
+        </div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style-type: none;
+}
+
+.asteroid-input {
+  display: none;
+}
+
+.asteroid-suggestion-and-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 200px;
+}
+
+.selected-asteroid > .fas {
+  cursor: pointer;
+}
+
+.selected-asteroid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-and-button {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-and-button > ul {
+  margin-bottom: 20px;
+}
+
+.list-and-button a {
+  display: none;
+}
+
+.bar {
+  height: 20px;
+  width: 0px;
+  text-align: center;
+  transition: width 2.5s;
+}
+
+.asteroid-bar-display {
+  width: 800px;
+  margin: 0 auto;
+}
+
+a {
+  padding: 20px;
+  border: 1px solid black;
+  background: transparent;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}

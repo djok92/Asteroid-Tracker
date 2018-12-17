@@ -1,0 +1,72 @@
+.container {
+  margin-top: 50px;
+  text-align: center;
+
+  .dates-container-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    width: 350px;
+    margin: 0 auto;
+    .container-start,
+    .container-end {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+      label {
+        font-size: 1.5rem;
+      }
+      input {
+        width: 70%;
+        padding: 5px;
+      }
+    }
+  }
+
+  .asteroid-suggestion-and-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0 40px;
+    display: none;
+    .input-for-table-holder {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      input {
+        width: 80%;
+        padding: 5px;
+      }
+      label {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+    }
+    .selected-asteroids-list-and-button {
+      h3 {
+        font-size: 1.8rem;
+        padding-bottom: 10px;
+        border-bottom: 1px solid steelblue;
+      }
+      .selected-asteroids {
+        padding-top: 10px;
+        text-align: center;
+        .selected-asteroid {
+          font-size: 1.6rem;
+          padding: 7px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .fas {
+            cursor: pointer;
+            color: steelblue;
+          }
+        }
+      }
+    }
+  }
+}

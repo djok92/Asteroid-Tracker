@@ -1,0 +1,16 @@
+.asteroid-bar-display {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: left;
+  .bar-name {
+    font-size: 1.8rem;
+  }
+  .bar {
+    width: 0px;
+    font-size: 1.6rem;
+    margin: 20px 0 40px 0;
+    padding: 10px 0;
+    text-align: center;
+    transition: all 1.5s;
+  }
+}

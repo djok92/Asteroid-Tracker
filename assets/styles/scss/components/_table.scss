@@ -1,0 +1,23 @@
+.asteroid-table-holder {
+  margin: 20px 0 40px 0;
+}
+
+.asteroid-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  thead {
+    padding-bottom: 7px;
+    border-bottom: 1px solid steelblue;
+    th {
+      font-size: 2rem;
+      padding: 10px 7px;
+      color: steelblue;
+      cursor: pointer;
+    }
+  }
+
+  td {
+    font-size: 1.6rem;
+    padding: 7px 10px;
+  }
+}
