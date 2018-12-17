@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nasync function fetchAsteroids(startDate, endDate) {\r\n  const apiKey = \"x0HeIJzRCLm3lj0zrfXt2LltusKVCO7aoHmRkVq2\";\r\n  const api = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${apiKey}`;\r\n  const apiCall = await fetch(api);\r\n  const data = await apiCall.json();\r\n  return data;\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (fetchAsteroids);\r\n\n\n//# sourceURL=webpack:///./assets/scripts/async-fetch-asteroids.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nasync function fetchAsteroids(startDate, endDate) {\r\n  let apiCall;\r\n  let data;\r\n  const apiKey = \"x0HeIJzRCLm3lj0zrfXt2LltusKVCO7aoHmRkVq2\";\r\n  const api = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${apiKey}`;\r\n  apiCall = await fetch(api);\r\n  data = await apiCall.json();\r\n  console.log(data);\r\n\r\n  if (data.code === 400) {\r\n    alert(data.error_message);\r\n    return;\r\n  } else {\r\n    return data;\r\n  }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (fetchAsteroids);\r\n\n\n//# sourceURL=webpack:///./assets/scripts/async-fetch-asteroids.js?");
 
 /***/ }),
 
