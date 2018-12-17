@@ -19,3 +19,9 @@ results.js - JS file for results.html
 Table sorting is managed with stupid-table-plugin - https://www.npmjs.com/package/stupid-table-plugin
 
 Files are bundled with webpack - https://webpack.js.org/
+
+Index page
+![My image](assets/screenshot/index-page.png)
+
+Results page
+![My image](assets/screenshot/results-page.png)

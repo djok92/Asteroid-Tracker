@@ -141,7 +141,7 @@ button {
   font-family: "Raleway", sans-serif; }
 
 .container {
-  margin-top: 50px;
+  margin: 50px 0;
   text-align: center; }
   .container .dates-container-holder {
     display: flex;
