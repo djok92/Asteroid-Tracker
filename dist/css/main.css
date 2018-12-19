@@ -1,1 +1,250 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after{content:"";content:none}q:before,q:after{content:"";content:none}table{border-collapse:collapse;border-spacing:0}html{font-size:10px;box-sizing:border-box;scroll-behavior:smooth}body{font-family:"Raleway", sans-serif}a{text-decoration:none}a:hover,a:focus,a:active{text-decoration:none}input,button{font-family:"Raleway", sans-serif}.container{margin:50px 0;text-align:center}.container .dates-container-holder{display:flex;flex-direction:column;justify-content:flex-end;padding:10px;width:350px;margin:0 auto}.container .dates-container-holder .container-start,.container .dates-container-holder .container-end{display:flex;justify-content:space-between;align-items:center;margin:10px 0}.container .dates-container-holder .container-start label,.container .dates-container-holder .container-end label{font-size:1.5rem}.container .dates-container-holder .container-start input,.container .dates-container-holder .container-end input{width:70%;padding:5px}.container .asteroid-suggestion-and-list{display:flex;justify-content:space-around;align-items:flex-start;margin:0 40px;display:none}.container .asteroid-suggestion-and-list .input-for-table-holder{width:350px;display:flex;flex-direction:column;justify-content:space-between;align-items:center}.container .asteroid-suggestion-and-list .input-for-table-holder input{width:80%;padding:5px}.container .asteroid-suggestion-and-list .input-for-table-holder label{font-size:1.5rem;margin-bottom:15px}.container .asteroid-suggestion-and-list .selected-asteroids-list-and-button h3{font-size:1.8rem;padding-bottom:10px;border-bottom:1px solid steelblue}.container .asteroid-suggestion-and-list .selected-asteroids-list-and-button .selected-asteroids{padding-top:10px;text-align:center}.container .asteroid-suggestion-and-list .selected-asteroids-list-and-button .selected-asteroids .selected-asteroid{font-size:1.6rem;padding:7px;display:flex;justify-content:space-between;align-items:center}.container .asteroid-suggestion-and-list .selected-asteroids-list-and-button .selected-asteroids .selected-asteroid .fas{cursor:pointer;color:steelblue}.btn{padding:15px 15px;font-size:1.6rem;text-transform:uppercase;color:#fff;background-color:steelblue;margin:25px 0;display:inline-block;cursor:pointer;border:none;outline:none;max-width:300px}.go-back{margin:25px 25px}.asteroid-table-holder{margin:20px 0 40px 0}.asteroid-table{margin:0 auto;border-collapse:collapse}.asteroid-table thead{padding-bottom:7px;border-bottom:1px solid steelblue}.asteroid-table thead th{font-size:2rem;padding:10px 7px;color:steelblue;cursor:pointer}.asteroid-table td{font-size:1.6rem;padding:7px 10px}.asteroid-bar-display{max-width:600px;margin:50px auto;text-align:left}.asteroid-bar-display .bar-name{font-size:1.8rem}.asteroid-bar-display .bar{width:0px;font-size:1.6rem;margin:20px 0 40px 0;padding:10px 0;text-align:center;transition:all 1.5s}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+body {
+  font-family: "Raleway", sans-serif; }
+
+a {
+  text-decoration: none; }
+  a:hover, a:focus, a:active {
+    text-decoration: none; }
+
+input,
+button {
+  font-family: "Raleway", sans-serif; }
+
+.container {
+  margin: 50px 0;
+  text-align: center; }
+  .container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px; }
+  .container .dates-container-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    width: 350px;
+    margin: 0 auto; }
+    .container .dates-container-holder .container-start,
+    .container .dates-container-holder .container-end {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0; }
+      .container .dates-container-holder .container-start label,
+      .container .dates-container-holder .container-end label {
+        font-size: 1.5rem; }
+      .container .dates-container-holder .container-start input,
+      .container .dates-container-holder .container-end input {
+        width: 70%;
+        padding: 5px; }
+  .container .asteroid-suggestion-and-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0 40px;
+    display: none; }
+    .container .asteroid-suggestion-and-list .input-for-table-holder {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; }
+      .container .asteroid-suggestion-and-list .input-for-table-holder input {
+        width: 80%;
+        padding: 5px; }
+      .container .asteroid-suggestion-and-list .input-for-table-holder label {
+        font-size: 1.5rem;
+        margin-bottom: 15px; }
+    .container .asteroid-suggestion-and-list .selected-asteroids-list-and-button h3 {
+      font-size: 1.8rem;
+      padding-bottom: 10px;
+      border-bottom: 1px solid steelblue; }
+    .container .asteroid-suggestion-and-list .selected-asteroids-list-and-button .selected-asteroids {
+      padding-top: 10px;
+      text-align: center; }
+      .container .asteroid-suggestion-and-list .selected-asteroids-list-and-button .selected-asteroids .selected-asteroid {
+        font-size: 1.6rem;
+        padding: 7px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .container .asteroid-suggestion-and-list .selected-asteroids-list-and-button .selected-asteroids .selected-asteroid .fas {
+          cursor: pointer;
+          color: steelblue; }
+
+.btn {
+  padding: 15px 15px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: steelblue;
+  margin: 25px 0;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  max-width: 300px; }
+
+.go-back {
+  margin: 25px 25px; }
+
+.asteroid-table-holder {
+  margin: 20px 0 40px 0; }
+
+.asteroid-table {
+  margin: 0 auto;
+  border-collapse: collapse; }
+  .asteroid-table thead {
+    padding-bottom: 7px;
+    border-bottom: 1px solid steelblue; }
+    .asteroid-table thead th {
+      font-size: 2rem;
+      padding: 10px 7px;
+      color: steelblue;
+      cursor: pointer; }
+  .asteroid-table td {
+    font-size: 1.6rem;
+    padding: 7px 10px; }
+
+.asteroid-bar-display {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: left; }
+  .asteroid-bar-display .bar-name {
+    font-size: 1.8rem; }
+  .asteroid-bar-display .bar {
+    width: 0px;
+    font-size: 1.6rem;
+    margin: 20px 0 40px 0;
+    padding: 10px 0;
+    text-align: center;
+    transition: all 1.5s; }

@@ -10,9 +10,7 @@ function setupDataList(asteroids, dataList) {
 
 function clearDataList(dataList) {
   if (dataList.options.length > 0) {
-    for (let i = 0; i < dataList.options.length; i++) {
-      dataList.options[i].value = null;
-    }
+    dataList.innerHTML = "";
   }
 }
 

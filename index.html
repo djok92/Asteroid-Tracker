@@ -19,18 +19,19 @@
   </head>
   <body>
     <div class="container" id="main">
+      <h1>Asteroid Tracker App - enter dates and go!</h1>
       <div class="dates-container-holder">
         <div class="container-start">
           <label for="container-start__input" class="container-start__label"
             >Start Date:</label
           >
-          <input type="text" class="container-start__input" />
+          <input type="text" class="container-start__input" placeholder="Date Format: YYYY-M-D" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Date Format: YYYY-M-D'"/>
         </div>
         <div class="container-end">
           <label for="container-end__input" class="container-start__label"
             >End Date:</label
           >
-          <input type="text" class="container-end__input" />
+          <input type="text" class="container-end__input"  placeholder="Date Format: YYYY-M-D" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Date Format: YYYY-M-D'"/>
         </div>
       </div>
       <button class="show-table btn">Prikaži Asteroide</button>
