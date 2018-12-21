@@ -7,13 +7,14 @@ async function fetchAsteroids(startDate, endDate) {
   try {
     apiCall = await fetch(api);
     data = await apiCall.json();
-    throw new Error();
+    console.log(data);
+    if (!apiCall.ok) {
+      throw new Error(data.error_message);
+    }
+    return data;
   } catch (error) {
     alert(data.error_message);
-    return;
   }
-
-  return data;
 }
 
 export default fetchAsteroids;

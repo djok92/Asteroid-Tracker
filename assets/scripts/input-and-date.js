@@ -2,6 +2,11 @@ function inputChecker(input1, input2) {
   if (input1.value === "" || input2.value === "") {
     alert("Please fill both inputs");
     return false;
+  } else if (
+    dateDifference(parseDate(input1.value), parseDate(input2.value)) > 7
+  ) {
+    alert("The difference between dates must be maximum 7 days!");
+    return false;
   }
 
   return true;

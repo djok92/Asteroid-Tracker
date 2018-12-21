@@ -45,37 +45,39 @@ function handleData() {
       "Max Prečnik(m)"
     ];
 
-    if (
-      dateDifference(parseDate(startDate.value), parseDate(endDate.value)) > 7
-    ) {
-      alert("The difference between dates must be maximum 7 days!");
-    } else {
-      fetchAsteroids(startDate.value, endDate.value).then(data => {
-        asteroidTable.innerHTML = "";
-        const validAsteroids = filterDangerousAsteroids(
-          data.near_earth_objects
-        );
-        createTableHeader(headerData, asteroidTable);
-        createTableBody(validAsteroids, asteroidTable);
-        inputAndList.style.display = "flex";
+    fetchAsteroids(startDate.value, endDate.value).then(data => {
+      asteroidTable.innerHTML = "";
+      const validAsteroids = filterDangerousAsteroids(data.near_earth_objects);
+      createTableHeader(headerData, asteroidTable);
+      createTableBody(validAsteroids, asteroidTable);
+      inputAndList.style.display = "flex";
 
-        setupDataList(validAsteroids, dataList);
-        setupAsteroidSearch();
-        setupAsteroidList(dataList);
-      });
-    }
+      setupDataList(validAsteroids, dataList);
+      setupAsteroidSearch();
+      setupAsteroidList(dataList);
+    });
   }
 }
 
-const timesTraveledBtn = document.querySelector(".times-traveled");
-if (timesTraveledBtn !== null) {
-  timesTraveledBtn.addEventListener("click", function() {
-    const asteroidsToBeShown = document.querySelectorAll(".selected-asteroid");
-    generateBars(asteroidsToBeShown);
-    setTimeout(() => {
-      redirect("results.html");
-    }, 1500);
-  });
+function handleTimesAroundEarthClick() {
+  const timesTraveledBtn = document.querySelector(".times-traveled");
+  const asteroidsToBeShown = document.querySelectorAll(".selected-asteroid");
+  if (timesTraveledBtn) {
+    timesTraveledBtn.addEventListener("click", function() {
+      if (asteroidsToBeShown.length > 0) {
+        generateBars(asteroidsToBeShown);
+        return (function() {
+          setTimeout(() => {
+            redirect("results.html");
+          }, 1500);
+        })();
+      } else {
+        alert("Please select asteroids from table!");
+      }
+    });
+  }
 }
+
+handleTimesAroundEarthClick();
 
 export default redirect;
